@@ -1,0 +1,1 @@
+[26-Apr-2015 12:43:57 UTC] PHP Warning:  rmdir(/home/yarracit/public_html/wp-content/uploads/backwpup-165c57-logs/): Directory not empty in /home/yarracit/public_html/wp-content/plugins/backwpup/uninstall.php on line 37

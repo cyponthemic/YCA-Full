@@ -1,36 +1,9 @@
+
+
 php_value max_input_vars 10000
 php_value suhosin.request.max_vars 10000
 php_value suhosin.post.max_vars 10000
 php_value max_input_nesting_level 128
-
-# BEGIN All In One WP Security
-#AIOWPS_BASIC_HTACCESS_RULES_START
-<files .htaccess>
-order allow,deny
-deny from all
-</files>
-ServerSignature Off
-LimitRequestBody 10240000
-<files wp-config.php>
-order allow,deny
-deny from all
-</files>
-#AIOWPS_BASIC_HTACCESS_RULES_END
-#AIOWPS_PINGBACK_HTACCESS_RULES_START
-<IfModule mod_alias.c>
-RedirectMatch 403 /(.*)/xmlrpc\.php$
-</IfModule>
-#AIOWPS_PINGBACK_HTACCESS_RULES_END
-#AIOWPS_BLOCK_SPAMBOTS_START
-<IfModule mod_rewrite.c>
-RewriteCond %{REQUEST_METHOD} POST
-RewriteCond %{REQUEST_URI} ^(.*)?wp-comments-post\.php(.*)$
-RewriteCond %{HTTP_REFERER} !^http://yarracityarts\.com\.au [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} ^$
-RewriteRule .* http://127.0.0.1 [L]
-</IfModule>
-#AIOWPS_BLOCK_SPAMBOTS_END
-# END All In One WP Security
 
 # BEGIN WPSuperCache
 <IfModule mod_rewrite.c>
