@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "YCATheme"]
+	url = https://github.com/cyponthemic/YCA.git
+	fetch = +refs/heads/*:refs/remotes/YCATheme/*
+[remote "YCA"]
+	url = git@github.com:cyponthemic/YCA.git
+	fetch = +refs/heads/*:refs/remotes/YCA/*
+[remote "YCAThemes"]
+	url = http://github.com/cyponthemic/YCA.git
+	fetch = +refs/heads/*:refs/remotes/YCAThemes/*
+[remote "origin"]
+	url = ssh://git@github.com/cyponthemic/YCA.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
