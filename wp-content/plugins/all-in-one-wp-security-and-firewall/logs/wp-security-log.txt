@@ -5803,3 +5803,4 @@
 [04/26/2015 12:54 AM] - NOTICE : The following IP address range has been locked out for exceeding the maximum login attempts: 88.226.138
 [04/26/2015 12:54 AM] - NOTICE : The following IP address range has been locked out for exceeding the maximum login attempts: 88.226.138
 [04/26/2015 12:54 AM] - NOTICE : The following IP address range has been locked out for exceeding the maximum login attempts: 88.226.138
+[04/26/2015 5:14 AM] - FAILURE : Error inserting record into YCA_aiowps_login_activity
