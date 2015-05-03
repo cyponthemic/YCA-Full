@@ -7,49 +7,45 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.5.1.8
  */
 ?>
-	</section><!-- #main .wrapper -->
-    
+	</section><!-- end .content-wrap -->
+
+    </div><!-- end .content_container -->
+
 	<?php
         if ( ! is_404() )
         get_sidebar( 'footer' );
-    ?>    
-        
-	<footer class="row" role="contentinfo">
+    ?>
 
-        <div class="large-7 columns">
-        
-        	<?php wp_nav_menu( array(
-            	'theme_location' => 'secondary',
-                'container' => false,
-                'menu_class' => 'inline-list left',
-                'fallback_cb' => false
-            ) ); ?>
-                
-       	</div><!-- .seven columns -->
-             
-		<div class="site-info large-5 columns">
-        
-            <?php esc_attr_e('Powered by', 'wpforge'); ?><a href="<?php echo esc_url(__('http://themeawesome.com/wpforge','wpforge')); ?>" rel="follow" target="_blank" title="<?php esc_attr_e('A mixin by ThemeAwesome.com', 'wpforge'); ?>">
-            <?php printf('WP-Forge'); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wpforge')); ?>" target="_blank" title="<?php esc_attr_e('WordPress', 'wpforge'); ?>">
-            <?php printf('WordPress'); ?></a>
-            
-		</div><!-- .site-info -->
+    <div class="footer_container">
 
-	</footer><!-- .row -->
-    
-	</div><!-- #wrapper -->  
-    
-    <div id="backtotop">
-    
-        <span class="icon-stack">
-          <i class="icon-sign-blank icon-stack-base"></i>
-          <i class="icon-double-angle-up icon-light"></i>
-        </span>    
-    
-    </div><!-- #backtotop --> 
+    	<footer id="footer" class="footer_wrap row" role="contentinfo">
+
+            <?php get_template_part( 'content', 'footer' ); ?>
+
+        	<?php get_template_part( 'content', 'social_menu' ); ?>
+
+    	</footer><!-- .row -->
+
+    </div><!-- end #footer_container -->
+
+<?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
+
+	  <a class="exit-off-canvas"></a>
+
+	</div><!-- .inner-wrap -->
+
+</div><!-- #off-canvas-wrap -->
+
+<?php } // end if ?>
+
+    <div id="backtotop" class="hvr-fade">
+
+        <span class="genericon genericon-collapse"></span>
+
+    </div><!-- #backtotop -->
 
 <?php wp_footer(); ?>
 </body>
