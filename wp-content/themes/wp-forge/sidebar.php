@@ -6,12 +6,12 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 1.0
  */
 ?>
 
-	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-		<div id="secondary" class="medium-4 large-4 columns widget-area" role="complementary">
-			<?php dynamic_sidebar( 'main-sidebar' ); ?>
+	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+		<div id="secondary" class="large-3 columns widget-area" role="complementary">
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>
