@@ -8,18 +8,18 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.5.1.8
  */
 
 get_header(); ?>
 
-	<div id="content" class="large-9 columns" role="main">
+	<div id="content" class="medium-8 large-8 columns" role="main">
     
-    	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
+    	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'wpforge' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+				<h4 class="archive-title"><?php printf( __( 'Category Archives: %s', 'wp-forge' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h4>
 
 			<?php if ( category_description() ) : // Show an optional category description ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
